@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+</head>
+<body class="min-h-screen bg-gradient-to-r from-yellow-100 to-lime-100 ">
+    <header class= "sticky z-10 top-0 text-lime-900 bg-gradient-to-l from-lime-900 via-yelloe-600 to-yellow-400">
+        <section class="max-w-4xl p-4 flex items-center justify-between md:container mx-auto px-6 md:px-0">
+            <h1 class="text-3xl font-serif font-normal text-lime-900">Naqsh-O-Tameer</h1>
+            <div class="sm:hidden relative" x-data="{ isOpen: false }">
+                <a id="login" class=" flex text-lime-50 cursor-pointer" href="login.html" onclick=""> 
+                    <svg class="h-6 w-6 text-white" viewBox="0 0 20 20">
+                        <path d="M12.075,10.812c1.358-0.853,2.242-2.507,2.242-4.037c0-2.181-1.795-4.618-4.198-4.618S5.921,4.594,5.921,6.775c0,1.53,0.884,3.185,2.242,4.037c-3.222,0.865-5.6,3.807-5.6,7.298c0,0.23,0.189,0.42,0.42,0.42h14.273c0.23,0,0.42-0.189,0.42-0.42C17.676,14.619,15.297,11.677,12.075,10.812 M6.761,6.775c0-2.162,1.773-3.778,3.358-3.778s3.359,1.616,3.359,3.778c0,2.162-1.774,3.778-3.359,3.778S6.761,8.937,6.761,6.775 M3.415,17.69c0.218-3.51,3.142-6.297,6.704-6.297c3.562,0,6.486,2.787,6.705,6.297H3.415z"></path>
+                    </svg>
+                    
+                </a>      
+                    <button id="mobile-menu-button" class="text-lime-50 cursor-pointer">
+                        <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                <div class="absolute left-20px top-10 bg-lime-900 rounded shadow-lg p-1 divide-y divide-lime-50" x-show="isOpen" @click.away="isOpen = false" id="mobile-menu" style="top: 3.5rem; right: -1rem ;">
+                    <a href="#" class="block text-lg text-lime-50 font-normal pl-3 pr-6 py-2 ">Home</a>
+                    <a href="#" class="block text-lg text-lime-50 font-normal pl-3 pr-6 py-2 ">Services</a>
+                    <a href="#" class="block text-lg text-lime-50 font-normal pl-3 pr-6 py-2 ">Contact</a>
+                    <a href="#" class="block text-lg text-lime-50 font-normal pl-3 pr-6 py-2 ">About</a>
+                </div>
+            </div>
+   
+                <div class="space-x-8 xl:space-x-12 sm:flex font-sans items-center justify-between hidden md:px-0" >
+                    <span class="text-lg text-lime-50 font-normal cursor-pointer">Home</span>
+                    <span class="text-lg text-lime-50 font-normal cursor-pointer">Services</span>
+                    <span class="text-lg text-lime-50 font-normal cursor-pointer">About</span>
+                    <span class="text-lg text-lime-50 font-normal cursor-pointer">Contact</span>
+                    <a href="login.html" class="text-lg text-lime-50 font-normal cursor-pointer">Login</a>
+                </div>
+            </section>
+        </header>
+        <div class="h-screen bg-white w-auto " >
+            
+        </div>
+        <footer class="max-w-100 h-auto px-16 text-lime-900 bg-gradient-to-l p-8 from-lime-900 via-yelloe-600 to-yellow-400">
+            <div class=" flex ">
+                <div>
+                    <img class="h-40 w-72" src="/src/images/db-not.jpeg" alt="logo">
+                    <div class="flex px-3 py-3">
+                        <img class="px-4" src="/src/images/fb.svg" alt="">
+                        <img class="px-4" src="/src/images/insta.svg" alt="">
+                        <img class="px-4" src="/src/images/linked-in.svg" alt="">
+                    </div>
+                </div>
+                <div class=" grid grid-cols-3 px-32 text-lg">
+                    <ul class="pl-16">
+                        <li class="font-bold pb-6">Services</li>
+                        <li class="pb-2">Estimations</li>
+                        <li class="pb-2">Architecture</li>
+                        <li class="pb-2">Constructions</li>
+                        <li class="pb-2">Bidings</li>
+                    </ul>
+                    <ul class="pl-16">
+                        <li class="font-bold">Contact Us</li>
+                        <li class="">Email: haideralimughal002@gmail.com</li>
+                        <li class="">Cell #: 03066149948</li>
+                        <li class="">Website: naqsh.o.tameer@not.com</li>
+                        <li class="">Ibrahim Ismail Constructions and Architects</li>
+                    </ul>
+                    <ul class="pl-32">
+                        <li class="pb-4 font-bold">Avialable On</li>
+                        <img class="pb-4" src="/src/images/google-playstore.svg" alt="">
+                        <img class="pb-4" src="/src/images/app-store.svg" alt="">
+                    </ul>
+
+                </div>
+
+
+            </div>
+        </footer>
+       
+       
+</body>
+
+<script>
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
+</html>
